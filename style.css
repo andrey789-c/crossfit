@@ -632,4 +632,7 @@ body {
   .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal.review__swiper-pagination {
     width: 100%;
   }
+  .slide__text {
+    font-size: 14px;
+  }
 }
