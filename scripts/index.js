@@ -3,6 +3,7 @@ var swiper = new Swiper(".swiper", {
     pagination: {
       el: ".swiper-pagination",
       type: 'bullets',
+      clickable: true
     },
     autoplay: {
       delay: 3000,
@@ -16,6 +17,7 @@ var reviewSwiper = new Swiper(".review__swiper", {
   pagination: {
     el: ".swiper-pagination",
     type: 'bullets',
+    clickable: true
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -31,7 +33,7 @@ window.addEventListener('resize', e=> {
     reviewSwiper.params.slidesPerView = 3
     reviewSwiper.params.slidesPerGroup = 3
     reviewSwiper.params.spaceBetween = 21
-  } else if(window.innerWidth > 550) {
+  } else if(window.innerWidth > 650) {
     reviewSwiper.params.slidesPerView = 2
     reviewSwiper.params.slidesPerGroup = 2
     reviewSwiper.params.spaceBetween = 10
@@ -42,7 +44,6 @@ window.addEventListener('resize', e=> {
   }
 })
 
-
 document.querySelector('#next').addEventListener('click', e => {
   e.target.innerHTML = ''
   document.querySelector('.about__next').style.display = 'inline-block'
@@ -52,3 +53,7 @@ document.querySelector('#prev').addEventListener('click', e => {
   document.querySelector('#next').innerHTML = 'далее'
   document.querySelector('.about__next').style.display = 'none'
 })
+
+if(window.innerWidth < 768) {
+  
+}
